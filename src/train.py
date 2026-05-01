@@ -84,7 +84,13 @@ def main(config_name):
 
     use_augmentation = config_name in ["augmentation", "synthetic_augmented"]
 
-    train_loader = get_dataloader("train", augment=use_augmentation)
+    use_synthetic = config_name in ["synthetic", "synthetic_augmented"]
+
+    train_loader = get_dataloader(
+        "train",
+        augment=use_augmentation,
+        use_synthetic=use_synthetic
+    )
     val_loader = get_dataloader("val", augment=False)
 
     model = build_model().to(DEVICE)
@@ -103,9 +109,9 @@ def main(config_name):
 
     for epoch in range(EPOCHS):
         train_loss, train_acc = train_one_epoch(
-            model, train_loader, criterion, optimizer, DEVICE
+           model, train_loader, criterion, optimizer, DEVICE
         )
-
+ 
         val_loss, val_acc = evaluate(
             model, val_loader, criterion, DEVICE
         )
