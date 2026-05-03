@@ -5,7 +5,7 @@ from PIL import Image, ImageEnhance, ImageFilter, ImageOps
 SOURCE_DIR = Path("data/train")
 TARGET_DIR = Path("data/synthetic_train")
 
-CLASSES = ["cardboard", "plastic", "metal"]
+CLASSES = ["cardboard", "plastic", "metal", "glass"]
 NUM_SYNTHETIC_PER_CLASS = 70
 
 IMAGE_EXTENSIONS = [".jpg", ".jpeg", ".png", ".webp"]

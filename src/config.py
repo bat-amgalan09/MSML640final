@@ -9,7 +9,7 @@ TRAIN_DIR = DATA_DIR / "train"
 VAL_DIR = DATA_DIR / "val"
 TEST_DIR = DATA_DIR / "test"
 
-CLASSES = ["cardboard", "plastic", "metal"]
+CLASSES = ["cardboard", "plastic", "metal", "glass"]
 NUM_CLASSES = len(CLASSES)
 
 IMAGE_SIZE = 224

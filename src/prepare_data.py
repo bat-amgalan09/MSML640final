@@ -6,7 +6,7 @@ from pathlib import Path
 SOURCE_DIR = Path("data/raw")
 TARGET_DIR = Path("data")
 
-CLASSES = ["cardboard", "plastic", "metal"]
+CLASSES = ["cardboard", "plastic", "metal", "glass"]
 TRAIN_PER_CLASS = 70
 VAL_PER_CLASS = 15
 TEST_PER_CLASS = 15
