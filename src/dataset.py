@@ -1,30 +1,38 @@
+import os
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader, ConcatDataset
 from .config import IMAGE_SIZE, BATCH_SIZE, DATA_DIR
 
 
 def get_transforms(augment=False):
-    normalize = transforms.Normalize(
-        mean=[0.485, 0.456, 0.406],
-        std=[0.229, 0.224, 0.225]
-    )
+    use_norm = os.getenv("USE_IMAGENET_NORM", "0") == "1"
+
+    transform_list = []
 
     if augment:
-        return transforms.Compose([
+        transform_list.extend([
             transforms.Resize((IMAGE_SIZE, IMAGE_SIZE)),
             transforms.RandomHorizontalFlip(),
             transforms.RandomRotation(15),
             transforms.ColorJitter(brightness=0.2, contrast=0.2),
             transforms.RandomResizedCrop(IMAGE_SIZE, scale=(0.8, 1.0)),
             transforms.ToTensor(),
-            normalize,
+        ])
+    else:
+        transform_list.extend([
+            transforms.Resize((IMAGE_SIZE, IMAGE_SIZE)),
+            transforms.ToTensor(),
         ])
 
-    return transforms.Compose([
-        transforms.Resize((IMAGE_SIZE, IMAGE_SIZE)),
-        transforms.ToTensor(),
-        normalize,
-    ])
+    if use_norm:
+        transform_list.append(
+            transforms.Normalize(
+                mean=[0.485, 0.456, 0.406],
+                std=[0.229, 0.224, 0.225]
+            )
+        )
+
+    return transforms.Compose(transform_list)
 
 def get_dataloader(split="train", augment=False, use_synthetic=False):
     transform = get_transforms(augment)
