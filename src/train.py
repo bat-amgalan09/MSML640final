@@ -8,6 +8,8 @@ import matplotlib.pyplot as plt
 from .config import EPOCHS, LEARNING_RATE, RESULTS_DIR, DEVICE
 from .dataset import get_dataloader
 from .model import build_model
+import random
+import numpy as np
 
 
 def train_one_epoch(model, loader, criterion, optimizer, device):
@@ -154,3 +156,7 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     main(args.config)
+    
+random.seed(42)
+np.random.seed(42)
+torch.manual_seed(42)

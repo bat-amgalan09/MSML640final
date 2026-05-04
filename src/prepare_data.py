@@ -14,7 +14,7 @@ RANDOM_SEED = 42
 IMAGE_EXTENSIONS = [".jpg", ".jpeg", ".png", ".webp"]
 
 def make_dirs():
-    for split in ["train", "val", "test"]:
+    for split in ["train", "val", "test", "synthetic_train"]:
         split_dir = TARGET_DIR / split
         if split_dir.exists():
             shutil.rmtree(split_dir)
@@ -30,11 +30,6 @@ def get_images(class_dir):
         images.extend(class_dir.glob(f"*{ext.upper()}"))
     return images
 
-
-def make_dirs():
-    for split in ["train", "val", "test"]:
-        for cls in CLASSES:
-            (TARGET_DIR / split / cls).mkdir(parents=True, exist_ok=True)
 
 
 def split_and_copy():

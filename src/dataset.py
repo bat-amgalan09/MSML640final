@@ -4,6 +4,11 @@ from .config import IMAGE_SIZE, BATCH_SIZE, DATA_DIR
 
 
 def get_transforms(augment=False):
+    normalize = transforms.Normalize(
+        mean=[0.485, 0.456, 0.406],
+        std=[0.229, 0.224, 0.225]
+    )
+
     if augment:
         return transforms.Compose([
             transforms.Resize((IMAGE_SIZE, IMAGE_SIZE)),
@@ -12,13 +17,14 @@ def get_transforms(augment=False):
             transforms.ColorJitter(brightness=0.2, contrast=0.2),
             transforms.RandomResizedCrop(IMAGE_SIZE, scale=(0.8, 1.0)),
             transforms.ToTensor(),
+            normalize,
         ])
 
     return transforms.Compose([
         transforms.Resize((IMAGE_SIZE, IMAGE_SIZE)),
         transforms.ToTensor(),
+        normalize,
     ])
-
 
 def get_dataloader(split="train", augment=False, use_synthetic=False):
     transform = get_transforms(augment)
