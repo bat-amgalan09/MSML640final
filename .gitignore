@@ -1,10 +1,23 @@
+# Python/cache
 __pycache__/
-*.pyc
+*.py[cod]
 .ipynb_checkpoints/
 .DS_Store
+
+# Environments
 .env
 .venv/
 mlenv/
-data/
-results/
-data/*/
+
+# Large raw dataset
+data/raw/
+
+# Model checkpoints
+results/models/
+
+# Duplicate experiment folders
+results_no_norm/
+results_imagenet_norm/
+
+# Zip files
+*.zip

@@ -1,13 +1,15 @@
+import argparse
 import csv
 import random
 import torch
 import numpy as np
 from PIL import Image, ImageEnhance, ImageFilter, ImageDraw
-from torchvision import datasets, transforms
+from torchvision import datasets
 from torch.utils.data import DataLoader
 from sklearn.metrics import accuracy_score
 
-from .config import DEVICE, DATA_DIR, RESULTS_DIR, IMAGE_SIZE
+from .config import DEVICE, DATA_DIR, RESULTS_DIR
+from .dataset import get_transforms
 from .model import build_model
 
 
@@ -15,14 +17,10 @@ class RobustnessDataset(torch.utils.data.Dataset):
     def __init__(self, root_dir, perturbation="clean"):
         self.base_dataset = datasets.ImageFolder(root=root_dir)
         self.perturbation = perturbation
-        self.transform = transforms.Compose([
-            transforms.Resize((IMAGE_SIZE, IMAGE_SIZE)),
-            transforms.ToTensor(),
-            transforms.Normalize(
-                mean=[0.485, 0.456, 0.406],
-                std=[0.229, 0.224, 0.225]
-            )
-        ])
+
+        # Important: use the same preprocessing as normal evaluation.
+        # This respects USE_IMAGENET_NORM=0 or USE_IMAGENET_NORM=1.
+        self.transform = get_transforms(augment=False)
 
     def __len__(self):
         return len(self.base_dataset)
@@ -87,12 +85,10 @@ def evaluate_under_perturbation(model, perturbation):
     return accuracy_score(all_labels, all_preds)
 
 
-def main():
+def main(config_name):
     random.seed(42)
     np.random.seed(42)
     torch.manual_seed(42)
-
-    config_name = "baseline"
 
     model = build_model().to(DEVICE)
     model_path = RESULTS_DIR / "models" / f"{config_name}_best.pth"
@@ -114,13 +110,24 @@ def main():
         })
         print(f"{perturbation}: {acc:.4f}")
 
-    with open(out_dir / "robustness_results.csv", "w", newline="") as f:
+    csv_path = out_dir / f"{config_name}_robustness_results.csv"
+
+    with open(csv_path, "w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=["model", "perturbation", "accuracy"])
         writer.writeheader()
         writer.writerows(rows)
 
-    print(f"Saved robustness results to {out_dir / 'robustness_results.csv'}")
+    print(f"Saved robustness results to {csv_path}")
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--config",
+        type=str,
+        default="synthetic",
+        choices=["baseline", "augmentation", "synthetic", "synthetic_augmented"]
+    )
+
+    args = parser.parse_args()
+    main(args.config)

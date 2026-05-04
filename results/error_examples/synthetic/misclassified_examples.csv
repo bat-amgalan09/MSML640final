@@ -1,0 +1,17 @@
+example_id,true_label,predicted_label,confidence,source_image,saved_image
+1,cardboard,plastic,0.4049,/Users/haider/MSML640/MSML640final/data/test/cardboard/Cardboard_177.jpg,/Users/haider/MSML640/MSML640final/results/error_examples/synthetic/001_true_cardboard_pred_plastic_conf_0.40.jpg
+2,glass,plastic,0.3393,/Users/haider/MSML640/MSML640final/data/test/glass/Glass_20.jpg,/Users/haider/MSML640/MSML640final/results/error_examples/synthetic/002_true_glass_pred_plastic_conf_0.34.jpg
+3,glass,plastic,0.3822,/Users/haider/MSML640/MSML640final/data/test/glass/Glass_24.jpg,/Users/haider/MSML640/MSML640final/results/error_examples/synthetic/003_true_glass_pred_plastic_conf_0.38.jpg
+4,glass,cardboard,0.3028,/Users/haider/MSML640/MSML640final/data/test/glass/Glass_296.jpg,/Users/haider/MSML640/MSML640final/results/error_examples/synthetic/004_true_glass_pred_cardboard_conf_0.30.jpg
+5,glass,metal,0.329,/Users/haider/MSML640/MSML640final/data/test/glass/Glass_347.jpg,/Users/haider/MSML640/MSML640final/results/error_examples/synthetic/005_true_glass_pred_metal_conf_0.33.jpg
+6,glass,plastic,0.4027,/Users/haider/MSML640/MSML640final/data/test/glass/Glass_44.jpg,/Users/haider/MSML640/MSML640final/results/error_examples/synthetic/006_true_glass_pred_plastic_conf_0.40.jpg
+7,metal,plastic,0.3144,/Users/haider/MSML640/MSML640final/data/test/metal/Metal_110.jpg,/Users/haider/MSML640/MSML640final/results/error_examples/synthetic/007_true_metal_pred_plastic_conf_0.31.jpg
+8,metal,plastic,0.3273,/Users/haider/MSML640/MSML640final/data/test/metal/Metal_217.jpg,/Users/haider/MSML640/MSML640final/results/error_examples/synthetic/008_true_metal_pred_plastic_conf_0.33.jpg
+9,metal,plastic,0.4848,/Users/haider/MSML640/MSML640final/data/test/metal/Metal_233.jpg,/Users/haider/MSML640/MSML640final/results/error_examples/synthetic/009_true_metal_pred_plastic_conf_0.48.jpg
+10,metal,plastic,0.416,/Users/haider/MSML640/MSML640final/data/test/metal/Metal_332.jpg,/Users/haider/MSML640/MSML640final/results/error_examples/synthetic/010_true_metal_pred_plastic_conf_0.42.jpg
+11,metal,cardboard,0.3325,/Users/haider/MSML640/MSML640final/data/test/metal/Metal_483.jpg,/Users/haider/MSML640/MSML640final/results/error_examples/synthetic/011_true_metal_pred_cardboard_conf_0.33.jpg
+12,metal,plastic,0.4331,/Users/haider/MSML640/MSML640final/data/test/metal/Metal_491.jpg,/Users/haider/MSML640/MSML640final/results/error_examples/synthetic/012_true_metal_pred_plastic_conf_0.43.jpg
+13,metal,plastic,0.3419,/Users/haider/MSML640/MSML640final/data/test/metal/Metal_505.jpg,/Users/haider/MSML640/MSML640final/results/error_examples/synthetic/013_true_metal_pred_plastic_conf_0.34.jpg
+14,plastic,metal,0.3726,/Users/haider/MSML640/MSML640final/data/test/plastic/Plastic_222.jpg,/Users/haider/MSML640/MSML640final/results/error_examples/synthetic/014_true_plastic_pred_metal_conf_0.37.jpg
+15,plastic,metal,0.3734,/Users/haider/MSML640/MSML640final/data/test/plastic/Plastic_285.jpg,/Users/haider/MSML640/MSML640final/results/error_examples/synthetic/015_true_plastic_pred_metal_conf_0.37.jpg
+16,plastic,metal,0.429,/Users/haider/MSML640/MSML640final/data/test/plastic/Plastic_771.jpg,/Users/haider/MSML640/MSML640final/results/error_examples/synthetic/016_true_plastic_pred_metal_conf_0.43.jpg

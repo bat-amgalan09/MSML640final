@@ -1,0 +1,5 @@
+cardboard: 70 train, 15 val, 15 test
+plastic: 70 train, 15 val, 15 test
+metal: 70 train, 15 val, 15 test
+glass: 70 train, 15 val, 15 test
+Data preparation complete.

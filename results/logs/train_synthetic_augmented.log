@@ -1,0 +1,14 @@
+Augment: True, Synthetic: True
+Augment: False, Synthetic: False
+Epoch [1/10] Train Loss: 1.3672, Train Acc: 0.3143 | Val Loss: 1.3433, Val Acc: 0.3500
+Epoch [2/10] Train Loss: 1.3116, Train Acc: 0.4143 | Val Loss: 1.2620, Val Acc: 0.4833
+Epoch [3/10] Train Loss: 1.2488, Train Acc: 0.5286 | Val Loss: 1.2121, Val Acc: 0.5833
+Epoch [4/10] Train Loss: 1.2058, Train Acc: 0.5607 | Val Loss: 1.1672, Val Acc: 0.6333
+Epoch [5/10] Train Loss: 1.1606, Train Acc: 0.6339 | Val Loss: 1.1269, Val Acc: 0.6833
+Epoch [6/10] Train Loss: 1.1138, Train Acc: 0.6786 | Val Loss: 1.0917, Val Acc: 0.7167
+Epoch [7/10] Train Loss: 1.0949, Train Acc: 0.6464 | Val Loss: 1.0573, Val Acc: 0.7000
+Epoch [8/10] Train Loss: 1.0427, Train Acc: 0.6893 | Val Loss: 1.0394, Val Acc: 0.7500
+Epoch [9/10] Train Loss: 1.0265, Train Acc: 0.6946 | Val Loss: 0.9985, Val Acc: 0.7667
+Epoch [10/10] Train Loss: 0.9883, Train Acc: 0.7268 | Val Loss: 0.9764, Val Acc: 0.7500
+Training complete for config: synthetic_augmented
+Best validation accuracy: 0.7667

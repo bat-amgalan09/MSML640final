@@ -1,0 +1,7 @@
+model,perturbation,accuracy
+synthetic,clean,0.7333
+synthetic,blur,0.7
+synthetic,noise,0.6
+synthetic,dark,0.6167
+synthetic,bright,0.6833
+synthetic,occlusion,0.6833

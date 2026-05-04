@@ -1,0 +1,7 @@
+clean: 0.7333
+blur: 0.7000
+noise: 0.6000
+dark: 0.6167
+bright: 0.6833
+occlusion: 0.6833
+Saved robustness results to /Users/haider/MSML640/MSML640final/results/robustness/synthetic_robustness_results.csv
