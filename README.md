@@ -130,7 +130,18 @@ This version is pinned because some PyTorch/torchvision installations may fail w
 
 ## 6. Prepare Dataset
 
-Run:
+## Data Reproduction Note
+
+The GitHub repository includes the prepared project data splits:
+
+```text
+data/train/
+data/val/
+data/test/
+data/synthetic_train/
+
+The large original raw dataset folder is not included in the repository because of size. Therefore, if you are using the submitted repository as-is, you can skip:
+
 
 ```bash
 python src/prepare_data.py
