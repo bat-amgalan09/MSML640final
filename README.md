@@ -1,5 +1,32 @@
-# Robust Waste Material Classification Using Transfer Learning
+## AI Usage and External Sources
+We used AI for non-core support tasks, including finding documentation/examples, README formatting, and understanding results for learning purposes. AI was not used for the core logic or initial project approach. The external sources below were used as references for documentation, code examples, and similar transfer learning/image classification workflows.
+* [https://archive.ics.uci.edu/dataset/908/realwaste](https://archive.ics.uci.edu/dataset/908/realwaste)
+* [https://www.mdpi.com/2078-2489/14/12/633](https://www.mdpi.com/2078-2489/14/12/633)
+* [https://docs.pytorch.org/tutorials/beginner/transfer_learning_tutorial.html](https://docs.pytorch.org/tutorials/beginner/transfer_learning_tutorial.html)
+* [https://docs.pytorch.org/vision/stable/models/generated/torchvision.models.efficientnet_b0.html](https://docs.pytorch.org/vision/stable/models/generated/torchvision.models.efficientnet_b0.html)
+* [https://arxiv.org/abs/1905.11946](https://arxiv.org/abs/1905.11946)
+* [https://docs.pytorch.org/vision/main/generated/torchvision.datasets.ImageFolder.html](https://docs.pytorch.org/vision/main/generated/torchvision.datasets.ImageFolder.html)
+* [https://docs.pytorch.org/tutorials/beginner/basics/data_tutorial.html](https://docs.pytorch.org/tutorials/beginner/basics/data_tutorial.html)
+* [https://docs.pytorch.org/vision/main/transforms.html](https://docs.pytorch.org/vision/main/transforms.html)
+* https://github.com/bentrevett/pytorch-image-classification
+* [https://docs.pytorch.org/docs/stable/generated/torch.nn.modules.loss.CrossEntropyLoss.html](https://docs.pytorch.org/docs/stable/generated/torch.nn.modules.loss.CrossEntropyLoss.html)
+* [https://docs.pytorch.org/docs/stable/generated/torch.optim.Adam.html](https://docs.pytorch.org/docs/stable/generated/torch.optim.Adam.html)
+* [https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html)
+* [https://scikit-learn.org/stable/modules/generated/sklearn.metrics.ConfusionMatrixDisplay.html](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.ConfusionMatrixDisplay.html)
+* [https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html)
+* [https://pillow.readthedocs.io/en/stable/reference/ImageFilter.html](https://pillow.readthedocs.io/en/stable/reference/ImageFilter.html)
+* [https://pillow.readthedocs.io/en/stable/reference/ImageEnhance.html](https://pillow.readthedocs.io/en/stable/reference/ImageEnhance.html)
+* https://github.com/RobustBench/robustbench
+* [https://pillow.readthedocs.io/en/stable/reference/ImageDraw.html](https://pillow.readthedocs.io/en/stable/reference/ImageDraw.html
+* [https://arxiv.org/abs/1903.12261](https://arxiv.org/abs/1903.12261)
+* [https://github.com/hendrycks/robustness](https://github.com/hendrycks/robustness)
+* [https://docs.pytorch.org/docs/stable/notes/randomness.html](https://docs.pytorch.org/docs/stable/notes/randomness.html)
+* [https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html)
 
+
+
+
+# Robust Waste Material Classification Using Transfer Learning
 
 
 ## Team
