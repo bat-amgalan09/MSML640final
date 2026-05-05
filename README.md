@@ -352,4 +352,4 @@ USE_IMAGENET_NORM=0 python -m src.collect_error_examples --config synthetic --ma
 
 ## 16. Main Conclusion
 
-Synthetic data gave the best test accuracy, improving performance from 70.00% for the baseline to 73.33%. This suggests that controlled synthetic perturbations can help generalization. However, the improvement is modest, and the model still struggles with visually similar materials such as glass, plastic, and metal. The project shows that the model learns useful visual patterns, but it may still rely on shortcuts such as shine, color, transparency, and object shape rather than true material identity.
+Synthetic data gave the best test accuracy, improving performance from 70.00% for the baseline to 73.33%. This suggests that controlled synthetic perturbations can help generalization. However, the improvement is modest, and the model still struggles with visually similar materials such as glass, plastic, and metal. The project shows that the model learns useful visual patterns, but it may still rely on shortcuts such as shine, color, transparency, and object shape rather than true material identity
